@@ -5,9 +5,7 @@ const Schema = mongoose.Schema;
 const userSchema = new Schema({
   username: string,
   password: string,
-  linkedinID: string,
-  picture: string,
-  likes: []
+  email: string
 })
 
 
