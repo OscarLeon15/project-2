@@ -6,4 +6,6 @@ router.get('/private/create-profile', (req, res, next) => {
   res.render('/user/create-profile.hbs');
 });
 
+
+
 module.exports = router;
