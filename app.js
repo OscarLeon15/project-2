@@ -72,10 +72,12 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
+
 // default value for title local
 app.locals.title = 'When will this app have a decent app homepage?';
 const index = require('./routes/index');
 app.use('/', index);
+
 // app.js
 // Mongoose configuration
 mongoose.Promise = Promise;
@@ -87,6 +89,7 @@ mongoose
    console.error('Error connecting to mongo', err)
  });
 // ...other code
+
 // Routes
 
 // const celebRoutes = require('./routes/celeb-routes');
