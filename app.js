@@ -105,5 +105,9 @@ app.use('/', router);
 const profilesRoute = require('./routes/profiles');
 app.use('/', profilesRoute);
 
+// connect to stadings
+const standings = require('./routes/standings-route');
+app.use('/', standings);
+
 
 module.exports = app;
