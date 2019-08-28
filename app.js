@@ -88,6 +88,14 @@ mongoose
  });
 // ...other code
 // Routes
+
+// const celebRoutes = require('./routes/celeb-routes');
+// app.use('/celebrities',celebRoutes);
+
+// const teamRoutes = require('./routes/teams');
+// app.use('/teams',teamRoutes); 
+
 const router = require("./routes/users");
 app.use('/', router);
+
 module.exports = app;
