@@ -101,4 +101,9 @@ mongoose
 const router = require("./routes/users");
 app.use('/', router);
 
+// connect profiles route
+const profilesRoute = require('./routes/profiles');
+app.use('/', profilesRoute);
+
+
 module.exports = app;
