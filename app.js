@@ -75,6 +75,9 @@ app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 
 // default value for title local
 app.locals.title = 'When will this app have a decent app homepage?';
+
+
+
 const index = require('./routes/index');
 app.use('/', index);
 
@@ -95,6 +98,7 @@ mongoose
 // const celebRoutes = require('./routes/celeb-routes');
 // app.use('/celebrities',celebRoutes);
 
+
 const teamRoutes = require('./routes/teams');
 app.use('/',teamRoutes); 
 
@@ -105,9 +109,14 @@ app.use('/', router);
 const profilesRoute = require('./routes/profiles');
 app.use('/', profilesRoute);
 
-// connect to stadings
+// connect to standings
 const standings = require('./routes/standings-route');
 app.use('/', standings);
+
+// connect to scorers
+const score = require('./routes/scorers-route');
+app.use('/', score);
+
 
 
 module.exports = app;
