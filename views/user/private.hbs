@@ -14,17 +14,16 @@
           <li>{{this}}</li>
         {{/each}}
         </ul>
-      <li>Avatar: {{this.picture}}</li>
+      <li>Avatar: {{this.picture}}</li>      
     </ul>
+    <p><a href="/private/edit?profile_id={{this._id}}" class="edit-button">Edit profile</a></p>
   </div>
   {{/each}}
 {{else}}
   <p>You don't have any profiles yet.</p>
 {{/if}}
   <a href="/private/create-profile">Create Profile</a>
-
 {{/if}}
-
 
   <div>
     <a href="/">Homepage</a>    
