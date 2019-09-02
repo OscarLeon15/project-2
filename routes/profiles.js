@@ -6,6 +6,6 @@ router.get('/private/create-profile', (req, res, next) => {
   res.render('user/create-profile');
 });
 
-
+// add POST request for API variables
 
 module.exports = router;
