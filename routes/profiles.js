@@ -15,7 +15,7 @@ router.post('/create-profile', (req, res, next) => {
   const newProfile = new Profile({ name, favoriteTeams, picture});
   newProfile.save()
     .then((profile) => {
-      res.redirect('/private/create-profile')
+      res.redirect('/private-page')
     })
     .catch((err) => {
       console.log(err);
