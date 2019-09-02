@@ -1,8 +1,11 @@
-Welcome to your profile!
 {{#if user}}
+  <h1>Welcome, {{user.username}}!</h1>
   <div>
     <a href="/">Homepage</a>
     <a href="/private/create-profile">Create Profile</a>
     <a href="/logout">Logout</a> 
   </div>
+
+  <h2>Your profiles:</h2>
+  
 {{/if}}
