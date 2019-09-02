@@ -6,6 +6,7 @@ const passport = require("passport");
 const User = require("../models/User");
 // /routes/auth-routes.js
 const ensureLogin = require("connect-ensure-login");
+const Profile = require('../models/Profile');
 
 // Bcrypt to encrypt passwords
 const bcrypt = require("bcryptjs");
@@ -63,6 +64,14 @@ router.post("/login", passport.authenticate("local", {
   passReqToCallback: true
 }));
 router.get("/private-page", ensureLogin.ensureLoggedIn(), (req, res) => {
+  console.log(req.user.username);
+  // find all profiles in database
+  // TODO: search only profiles created by current user
+  Profile.find()
+    .then(allProfiles => {
+      console.log(allProfiles);
+    })
+    .catch(err => {err});
   res.render("user/private", { user: req.user });
 });
 
