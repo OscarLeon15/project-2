@@ -1,17 +1,29 @@
 {{#if user}}
   <h1>Welcome, {{user.username}}!</h1>
   <div>
-    <a href="/">Homepage</a>
-    <a href="/private/create-profile">Create Profile</a>
+    <a href="/">Homepage</a>    
     <a href="/logout">Logout</a> 
   </div>
-
-  <h2>Your profiles:</h2>
-
+   
+   <h3>Your profiles:</h3>
+{{#if profiles}}
   {{#each profiles}}
-  <ul>
-    <li>{{this.name}} - Favorite team: {{this.favoriteTeams}} | Avatar: {{this.picture}}</li>
-  </ul>
+  <div class='my-profile'>
+    <h4>{{this.name}}</h4>
+    <ul>
+      <li>Favorite teams:
+        <ul>
+        {{#each this.favoriteTeams}}
+          <li>{{this}}</li>
+        {{/each}}
+        </ul>
+      <li>Avatar: {{this.picture}}</li>
+    </ul>
+  </div>
   {{/each}}
+{{else}}
+  <p>You don't have any profiles yet.</p>
+{{/if}}
+  <a href="/private/create-profile">Create Profile</a>
 
 {{/if}}
