@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const profileSchema = new Schema({
     name: String,
     favoriteTeams: [],
-    picture: String    
+    picture: { type: String, default: 'https://res.cloudinary.com/alejotsv/image/upload/v1567385712/no-avatar.png' }
 })
 
 const Profile = mongoose.model('Profile', profileSchema)
