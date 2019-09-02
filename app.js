@@ -77,7 +77,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 
 // default value for title local
-app.locals.title = 'When will this app have a decent app homepage?';
+app.locals.title = 'Live Football Updates';
 
 
 
