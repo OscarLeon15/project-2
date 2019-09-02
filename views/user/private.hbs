@@ -1,9 +1,6 @@
 {{#if user}}
   <h1>Welcome, {{user.username}}!</h1>
-  <div>
-    <a href="/">Homepage</a>    
-    <a href="/logout">Logout</a> 
-  </div>
+
    
    <h3>Your profiles:</h3>
 {{#if profiles}}
@@ -27,3 +24,9 @@
   <a href="/private/create-profile">Create Profile</a>
 
 {{/if}}
+
+
+  <div>
+    <a href="/">Homepage</a>    
+    <a href="/logout">Logout</a> 
+  </div>
