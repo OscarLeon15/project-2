@@ -98,10 +98,6 @@ mongoose
 
 // Routes
 
-// const celebRoutes = require('./routes/celeb-routes');
-// app.use('/celebrities',celebRoutes);
-
-
 const teamRoutes = require('./routes/teams');
 app.use('/',teamRoutes); 
 
