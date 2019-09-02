@@ -3,11 +3,12 @@ const router  = express.Router();
 const Profile = require('../models/Profile');
 
 /* GET profile page */
+// TODO: add call to API load teams
 router.get('/private/create-profile', (req, res, next) => {
   res.render('user/create-profile');
 });
 
-// add POST request for API variables
+// POST request to add new profile
 router.post('/create-profile', (req, res, next) => {
   const { name, favoriteTeams, picture} = req.body;
   console.log(req.body);
