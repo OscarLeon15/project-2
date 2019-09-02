@@ -5,7 +5,9 @@ const profileSchema = new Schema({
     name: String,
     favoriteTeams: [],
     picture: { type: String, default: 'https://res.cloudinary.com/alejotsv/image/upload/v1567385712/no-avatar.png' }
-})
+}, {
+    timestamps: true;
+});
 
 const Profile = mongoose.model('Profile', profileSchema)
 //mongoose expects the name of the model to be singular and have a capital first letter
