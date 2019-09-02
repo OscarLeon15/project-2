@@ -5,7 +5,7 @@ const Profile = require('../models/Profile');
 /* GET profile page */
 // TODO: add call to API load teams
 router.get('/private/create-profile', (req, res, next) => {  
-  res.render('user/create-profile');
+  res.render('user/create-profile', { username: req.user.username });
 });
 
 // POST request to add new profile
