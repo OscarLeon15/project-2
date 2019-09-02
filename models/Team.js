@@ -4,9 +4,9 @@ const Schema = mongoose.Schema;
 
 const teamSchema = new Schema({
     country: String,
-    players: [],
     image: String,
     squad: [],
+    
 })
 
 
