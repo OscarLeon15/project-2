@@ -2,9 +2,22 @@ const express = require('express');
 const router  = express.Router();
 const Profile = require('../models/Profile');
 
-/* GET profile page */
+// GET user landing page (/private-page)
+router.get('/private-page', (req,res,next) => {
+  console.log(req.user.username);
+  // find all profiles in database
+  // TODO: search only profiles created by current user
+  Profile.find()
+    .then(allProfiles => {
+      console.log(allProfiles);
+    })
+    .catch(err => {err});
+});
+
+/* GET create profile page */
 // TODO: add call to API load teams
-router.get('/private/create-profile', (req, res, next) => {  
+  router.get('/private/create-profile', (req, res, next) => {  
+  
   // load username information from req.user to separate profiles created by each user
   res.render('user/create-profile', { username: req.user.username });
 });
