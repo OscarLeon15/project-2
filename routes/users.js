@@ -70,7 +70,7 @@ router.get("/private-page", ensureLogin.ensureLoggedIn(), (req, res) => {
   Profile.find({ 'username': req.user.username})
     .then(userProfiles => {
       console.log(userProfiles);
-      res.render("user/private", { user: req.user });
+      res.render("user/private", { user: req.user, profiles: userProfiles});
     })
     .catch(err => {err});
   

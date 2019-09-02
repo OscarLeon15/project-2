@@ -7,5 +7,11 @@
   </div>
 
   <h2>Your profiles:</h2>
-  
+
+  {{#each profiles}}
+  <ul>
+    <li>{{this.name}} - Favorite team: {{this.favoriteTeams}} | Avatar: {{this.picture}}</li>
+  </ul>
+  {{/each}}
+
 {{/if}}
