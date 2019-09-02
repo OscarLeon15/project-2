@@ -1,5 +1,16 @@
 <h1>Here you will create your profile</h1>
 
-<p>Back to <a href="/">Homepage</a></p>
+<form action="/create-profile" method="post">
+  <label for="">Name:</label>
+  <input type="text" name="name">
 
-<div id='testing-league-teams-js'></div>
+  <label for="">Favorite team(s):</label>
+  <input type="text" name="favoriteTeams">
+
+  <label for="">Avatar:</label>
+  <input type="text" name="picture">
+
+  <button type="submit">Create</button>
+</form>
+
+<p>Back to <a href="/">Homepage</a></p>
