@@ -63,13 +63,10 @@ router.post("/login", passport.authenticate("local", {
   failureFlash: true,
   passReqToCallback: true
 }));
-router.get("/private-page", ensureLogin.ensureLoggedIn(), (req, res) => {
-  console.log(req.user.username);
-  // find all profiles in database
-  // TODO: search only profiles created by current user
+router.get("/private-page", ensureLogin.ensureLoggedIn(), (req, res) => {  
+  // find all profiles in the database created by the current user
   Profile.find({ 'username': req.user.username})
-    .then(userProfiles => {
-      console.log(userProfiles);
+    .then(userProfiles => {     
       res.render("user/private", { user: req.user, profiles: userProfiles});
     })
     .catch(err => {err});
