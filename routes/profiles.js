@@ -12,9 +12,9 @@ const Profile = require('../models/Profile');
 
 // POST request to add new profile
 router.post('/create-profile', (req, res, next) => {
-  const { username, name, favoriteTeams, picture} = req.body;  
+  const { username, name, favoriteTeam, picture} = req.body;  
 
-  const newProfile = new Profile({ username, name, favoriteTeams, picture});
+  const newProfile = new Profile({ username, name, favoriteTeam, picture});
   newProfile.save()
     .then((profile) => {
       res.redirect('/private-page')
