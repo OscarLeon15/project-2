@@ -31,13 +31,20 @@ router.get('/private/edit/:id', (req, res, next) => {
 
   // find profile object using ID
   Profile.findOne({ _id: profileID })
-    .then((profile) => {
-      console.log(profile);
+    .then((profile) => {      
       res.render("user/edit-profile", { profile, username: req.user.username });
     })
     .catch((err) => {
       console.log(err);
     })  
+});
+
+// POST request to save updated profile
+router.post('/private/edit/:id', (req, res, next) => {
+  const { username, name, favoriteTeam, picture } = req.body;
+  console.log(req.body);
+  console.log(req.params.id);
+  res.redirect('/private-page');
 });
 
 module.exports = router;
