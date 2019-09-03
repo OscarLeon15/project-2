@@ -42,9 +42,14 @@ router.get('/private/edit/:id', (req, res, next) => {
 // POST request to save updated profile
 router.post('/private/edit/:id', (req, res, next) => {
   const { username, name, favoriteTeam, picture } = req.body;
-  console.log(req.body);
-  console.log(req.params.id);
-  res.redirect('/private-page');
+  const profileID = req.params.id;
+  Profile.update({ _id: profileID }, { $set: { username, name, favoriteTeam, picture }})
+    .then((profile) => {
+      res.redirect('/private-page');
+    })
+    .catch((err) => {
+      console.log(err);
+    });  
 });
 
 module.exports = router;
