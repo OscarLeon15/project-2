@@ -27,11 +27,13 @@ router.post('/create-profile', (req, res, next) => {
 // GET request to edit profile
 router.get('/private/edit/:id', (req, res, next) => {
   // extract profile ID to search database
-  const profileID = req.params.id;  
+  const profileID = req.params.id;
+
+  // find profile object using ID
   Profile.findOne({ _id: profileID })
     .then((profile) => {
       console.log(profile);
-      res.render("user/edit-profile", {profile});
+      res.render("user/edit-profile", { profile, username: req.user.username });
     })
     .catch((err) => {
       console.log(err);
