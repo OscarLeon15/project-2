@@ -26,6 +26,8 @@ router.post('/create-profile', (req, res, next) => {
 
 // GET request to edit profile
 router.get('/private/edit/:id', (req, res, next) => {
+  const profileID = req.params.id;
+  console.log(profileID);
   res.render("user/edit-profile");
 });
 
