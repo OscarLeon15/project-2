@@ -7,6 +7,7 @@ $.ajax({
 }).done(function(response) {
   // do something with the response, e.g. isolate the id of a linked resource   
   // console.log(response);
+  console.log(response)
 });
 
 });

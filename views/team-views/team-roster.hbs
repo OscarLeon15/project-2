@@ -1,4 +1,21 @@
+<div id="search-club">
+  {{!-- action is calling the route where the information should be stored? --}}
+  <form action="/search" method="GET">
 
+    <label for="">Country</label>
+    <input type="text" name="country" id="">
+
+    <label for="">Club</label>
+    <input type="text" name="club" id="">
+    <button type="submit">SEARCH</button>
+    {{!-- <label for="">Start-Date</label>
+    <input type="date" name="start-date" id="">
+
+    <label for="">End-Date</label>
+    <input type="date" name="end-date" id="">
+    <button type="submit">SEARCH</button> --}}
+  </form>
+</div>
 
 <div>
   <div>
@@ -18,7 +35,7 @@
           </tr>
         </thead>
         <tbody id="team-player-roster">
-          <tr>
+          {{!-- <tr>
             <td></td>
             <td></td>
             <td></td>
@@ -31,7 +48,7 @@
             <td></td>
             <td></td>
             <td></td>
-          </tr>
+          </tr> --}}
         </tbody>
       </table>
     </div>
@@ -40,3 +57,9 @@
 
 
 </div>
+
+
+
+
+
+<script type="text/javascript" src="./javascripts/league-teams.js"></script>
