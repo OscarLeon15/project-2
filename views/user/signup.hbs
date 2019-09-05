@@ -1,22 +1,27 @@
-<!-- views/auth/signup.hbs -->
-<h2>Signup. Only for soccer fans</h2>
 
-<form action="/signup" method="POST" id="form-container">
-  <label for="username">Username</label>
-  <input id="username" type="text" name="username" placeholder="username">
-  <br><br>
-  <label for="password">Password</label>
-  <input id="password" type="password" name="password" placeholder="Your password">
 
-  {{#if message}}
-    <div class="error-message">{{ message }}</div>
-  {{/if}}
-  <br><br>
 
-  <button>Create account</button>
+<div class="sign-in-up">
+    <!-- views/auth/signup.hbs -->
+    <h2>Signup. Only for soccer fans</h2>
 
-  <p class="account-message">
-    Do you already have an account?
-    <a href="/login">Login</a>
-  </p>
-</form>
+    <form action="/signup" method="POST" id="form-container" class="sign-form">
+      <label for="username">Username</label>
+      <input id="username" type="text" name="username" placeholder="username">
+      <br><br>
+      <label for="password">Password</label>
+      <input id="password" type="password" name="password" placeholder="password">
+
+      {{#if message}}
+        <div class="error-message">{{ message }}</div>
+      {{/if}}
+      <br><br>
+
+      <button>Create account</button>
+
+      <p class="account-message">
+        Do you already have an account?
+        <a href="/login">Login</a>
+      </p>
+    </form>
+</div>
