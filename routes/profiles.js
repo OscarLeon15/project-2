@@ -52,4 +52,16 @@ router.post('/private/edit/:id', (req, res, next) => {
     });  
 });
 
+// POST request to delete profile
+router.post('/private/delete/:id', (req, res, next) => { 
+  const profileID = req.params.id;
+  Profile.findByIdAndRemove(profileID)
+    .then(() => {
+      res.redirect('/private-page');
+    })
+    .catch((err) => {
+      console.log(err);
+    });  
+});
+
 module.exports = router;

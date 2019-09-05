@@ -11,12 +11,16 @@
       <li>Favorite team: {{this.favoriteTeam}}
       <li>Avatar: {{this.picture}}</li>
     </ul>
-    <p><a href="/private/edit/{{this._id}}" class="edit-button">Edit profile</a></p>
+    <p><a href="/private/edit/{{this._id}}" class="edit-button">Edit profile</a></p>  
+    <form action="/private/delete/{{this._id}}" method="POST">
+    <button>Delete Profile</button>
+</form>
   </div>
   {{/each}}
 {{else}}
   <p>You don't have any profiles yet.</p>
 {{/if}}
+  <br><br>
   <a href="/private/create-profile">Create Profile</a>
 {{/if}}
 
