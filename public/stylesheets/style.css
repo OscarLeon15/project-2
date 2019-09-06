@@ -9,7 +9,7 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 a{
-  color: #00B7FF; 
+  /* color: #00B7FF;  */
   text-decoration: none;
 }
 h2{
@@ -29,6 +29,8 @@ button{
 }
 #login-submit-bttn{
   width: 200px;
+  height: 40px;
+  margin: 15px;
   background-color: lightblue;
   border-radius: 12px;
   border-style: none;
@@ -38,10 +40,11 @@ button{
   padding-top: 15px;
 }
 .button-sign{
+  background-color: lightslategrey;
   border-radius: 12px;
+  border-style: none;
 }
 .bttn-sign-up{
-  
   border-radius: 12px;
   background-color: white;
   color: black;

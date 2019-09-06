@@ -10,7 +10,7 @@
           <label for="username">Username</label>
           <input id="username" type="text" name="username" placeholder="create username">
         </div>
-        <div>
+        <div class="padding-15">
           <label for="password">Password</label>
           <input id="password" type="password" name="password" placeholder="create password">
         </div>
@@ -18,14 +18,13 @@
         {{#if message}}
           <div class="error-message">{{ message }}</div>
         {{/if}}
-
-        <button>Create account</button>
+        <div class="padding-15">
+          <button class="button-sign">Create account</button>
+        </div>
 
         {{!-- <p class="account-message">Do you already have an account?</p> --}}
         <p>Do you already have an account?</p>
-          <button>
-            <a href="/login">Login</a>
-          </button>
+          <a href="/login"><button class="button-sign">Login</button></a>
       </form>
   </div>
 
