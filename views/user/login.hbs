@@ -1,23 +1,25 @@
 
+<div class="sign-page">
+
+  <div class="sign-div">
+      <h2>Log In</h2>
+      <form action="/login" method="POST" class="sign-form">
+        <div>
+          <label for="username">Username:</label>
+          <input type="text" name="username" placeholder="username">
+        </div>
+        <div>
+          <label for="password">Password:</label>
+          <input type="password" name="password" placeholder="password">
+        </div>
+        {{#if message}}
+          <div class="error-message">{{ message }}</div>
+        {{/if}}
+        <div>
+          <input type="submit" value="Log In" id="login-submit-bttn">
+        </div>
+      </form>
+  </div>
 
 
-
-<div class="sign-in-up">
-    <h2>Log In</h2>
-    <form action="/login" method="POST" class="sign-form">
-      <div>
-        <label for="username">Username:</label>
-        <input type="text" name="username" placeholder="username">
-      </div>
-      <div>
-        <label for="password">Password:</label>
-        <input type="password" name="password" placeholder="password">
-      </div>
-      {{#if message}}
-        <div class="error-message">{{ message }}</div>
-      {{/if}}
-      <div>
-        <input type="submit" value="Log In">
-      </div>
-    </form>
 </div>

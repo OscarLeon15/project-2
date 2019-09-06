@@ -1,12 +1,61 @@
+
+*{
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+}
 body {
   /* padding: 50px; */
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
-
-a {
-  color: #00B7FF; }
-
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+a{
+  color: #00B7FF; 
+  text-decoration: none;
+}
+h2{
+  font-size: 25px;
+}
+.padding-15{
+  padding: 15px;
+}
 /*# sourceMappingURL=style.css.map */
+/* buttons........................................................................ */
+button{
+  width: 200px;
+  height: 40px;
+  text-decoration: none;
+  border-style: none;
+  border-radius: 12px;
+}
+#login-submit-bttn{
+  width: 200px;
+  background-color: lightblue;
+  border-radius: 12px;
+  border-style: none;
 
+}
+.login-home-div{
+  padding-top: 15px;
+}
+.button-sign{
+  border-radius: 12px;
+}
+.bttn-sign-up{
+  
+  border-radius: 12px;
+  background-color: white;
+  color: black;
+}
+.bttn-sign-in{
+  border-radius: 12px;
+  background-color: black;
+  color: white;
+}
+.button-container{
+  display: flex;
+  flex-direction: column;
+}
+/* HOME page...................................................................... */
 #homepage-div{
   color: white;
   height: 750px;
@@ -26,17 +75,28 @@ a {
   justify-content: center;
   align-items: center;
 }
-.container{
-  width: 200px;
-}
+
 /* sign in/up page ..................................................... */
-.sign-in-up{
-  background-color: lightgreen;
+.sign-page{
+  height: 750px;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("../images/stripped-grass.jpg");
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+}
+.sign-div{
+  /* background-color: lightgrey; */
+  height: 750px;
+  display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
 }
 .sign-form{
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
