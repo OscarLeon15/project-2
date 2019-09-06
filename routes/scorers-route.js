@@ -7,6 +7,9 @@ router.get('/scorersLaLiga', (req, res, next) => {
     res.render('static-views/scorersLiga');
 })
 
+router.get('/news', (req, res, next) => {
+  res.render('static-views/news');
+})
 
 router.get('/scorersSerieA', (req, res, next) => {
   res.render('static-views/scorersSerie');
