@@ -12,9 +12,8 @@ const flash = require("connect-flash");
 const session = require("express-session");
 const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
-const User = require('./models/User')
-const Profile = require('./models/Profile')
-
+const User = require('./models/User');
+const Profile = require('./models/Profile');
 
 mongoose
  .connect('mongodb://localhost/project-2', {useNewUrlParser: true})
