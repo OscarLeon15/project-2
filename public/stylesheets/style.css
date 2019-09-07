@@ -58,6 +58,7 @@ button{
   background-color: white;
   color: black;
 }
+/* button color */
 .bttn-sign-in{
   border-radius: 12px;
   background-color: rebeccapurple;
@@ -130,8 +131,8 @@ button{
 }
 .nav{
   width: 100%;
-  padding: 15px 0px;
-  background-color: lightslategrey;
+  height: 50px;
+  background-color: darkgreen;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -140,6 +141,15 @@ button{
 }
 .nav div{
   margin: 0 20px;
+}
+.nav a{
+  color: white;
+  border: 1px solid white;
+  height: 100%;
+  padding: 0 10px;
+}
+.nav-a:hover{
+  color: red;
 }
 .my-profile{
   /* background-color: lightcyan; */

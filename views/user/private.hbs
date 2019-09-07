@@ -4,7 +4,7 @@
   </div>
   <div>
     <a href="/private/create-profile">Create Profile</a> 
-    <a href="/logout">Logout</a> 
+    <a href="/logout" class="nav-a">Logout</a> 
   </div>
 </div>
 <div>
@@ -20,19 +20,13 @@
   <div class="full-card">
 
     <div class="profile-box">
-    <ul>
-      <li><img src="{{this.picture}}" alt="avatar picture" class="avatar-picture"></li>
-      <li  class="card-name">
-      <a href="/teams/roster"><h4>{{this.name}}</h4></a>
-      </li>
-      <li>Favorite team: {{this.favoriteTeam}}
-    </ul>
-    {{!-- <div class="profile-box-buttons-div">
-      <button class="bttn-sign-in"><a href="/private/edit/{{this._id}}" class="edit-button">Edit profile</a></button>
-        <form action="/private/delete/{{this._id}}" method="POST">
-          <button>Delete Profile</button>
-        </form>
-    </div> --}}
+      <ul>
+        <li><a href="/teams/roster"><img src="{{this.picture}}" alt="avatar picture" class="avatar-picture"></a></li>
+        <li  class="card-name">
+        <a href="/teams/roster"><h4>{{this.name}}</h4></a>
+        </li>
+        <li>Favorite team: {{this.favoriteTeam}}
+      </ul>
     </div>
     <div class="profile-box-buttons-div">
       <button class="bttn-sign-in"><a href="/private/edit/{{this._id}}" class="edit-button">Edit profile</a></button>
