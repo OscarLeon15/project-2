@@ -18,7 +18,7 @@ const ligaSchema = new Schema({
 
 
 
-const theLigaModel = m.model('60Liga', ligaSchema)
+const theLigaModel = m.model('League', ligaSchema)
 //mongoose expects the name of the model to be singular and havea capital first letter
 //name of the collection in DB will be called celebrities with lower case C because mongoose will do it by magic
 

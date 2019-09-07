@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 const Liga = require('../models/Liga');
-const dbName = 'Liga-60';
+const dbName = 'project-2';
 mongoose.connect(`mongodb://localhost/${dbName}`);
-const testing = [
+const leagues = [
   {
     "id": 77,
     "area": {
@@ -1147,11 +1147,11 @@ const testing = [
 
 ]
 
-// if there are some spelling mistakes make sure to ether delete the first objects in the
+// if there are some spelling mistakes make sure to either delete the first objects in the
 //database then (ctrl c) the go to the folder that has the seed.js in this case cd bin
 // then type again "$node seed.js"
-Liga.create(testing, (err) =>{
+Liga.create(leagues, (err) =>{
   if(err) { throw(err) }
-  console.log(`Created ${testing.length} testing`)
+  console.log(`Created ${leagues.length} leagues`)
   mongoose.connection.close();
 })
