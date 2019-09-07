@@ -104,3 +104,44 @@ button{
   flex-direction: column;
   align-items: center;
 }
+
+/* profile page.................................................................. */
+.profile-background-div{
+  /* color: white; */
+  height: 750px;
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  align-items: center;
+  background-color: lightgrey;
+  /* background-image: url("../images/profile-background1.jpg");
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover; */
+}
+.nav{
+  width: 100%;
+  padding: 15px 0px;
+  background-color: lightblue;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+.my-profile{
+  background-color: lightgreen;
+  display: flex;
+}
+.profile-box{
+  border: solid 2px black;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  /* padding: auto 20px; */
+  margin: auto 20px;
+  width: 400px;
+}
+.private-bottom-links-div a{
+  color: black;
+}

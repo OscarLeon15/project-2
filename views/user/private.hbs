@@ -24,7 +24,50 @@
   <a href="/private/create-profile">Create Profile</a>
 {{/if}}
 
-  <div>
+
+<div class="profile-background-div">
+<div class="nav">
     <a href="/">Homepage</a>    
     <a href="/logout">Logout</a> 
+</div>
+
+  {{!-- <div>
+    {{#if user}}
+      <h1>Welcome, {{user.username}}!</h1>
+
+      
+      <h3>Your profiles:</h3>
+    {{#if profiles}}
+      <div class='my-profile'>
+      {{#each profiles}}
+        <div class="profile-box">
+          <h4>{{this.name}}</h4>
+          <ul>
+            <li>Favorite team: {{this.favoriteTeam}}
+            <li>Avatar: {{this.picture}}</li>
+          </ul>
+          <p><a href="/private/edit/{{this._id}}" class="edit-button">Edit profile</a></p>  
+          <form action="/private/delete/{{this._id}}" method="POST">
+            <button>Delete Profile</button>
+          </form>
+        </div>
+      {{/each}}
+      </div>
+
+
+    {{else}}
+      <p>You don't have any profiles yet.</p>
+    {{/if}}
+      <br><br>
+      <div class="private-bottom-links-div">
+        <a href="/private/create-profile">Create Profile</a>
+      </div>
+    {{/if}}
+
+      <div class="private-bottom-links-div">
+        <a href="/">Homepage</a>    
+        <a href="/logout">Logout</a> 
+      </div> --}}
+
   </div>
+</div>
