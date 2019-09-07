@@ -13,10 +13,10 @@
   <div class='my-profile'>
   {{#each profiles}}
     <div class="profile-box">
-      <a href="/teams/roster"><h4>{{this.name}}</h4></a>
     <ul>
+      <li><img src="{{this.picture}}" alt="avatar picture"> </li>
+      <a href="/teams/roster"><h4>{{this.name}}</h4></a>
       <li>Favorite team: {{this.favoriteTeam}}
-      <li>Avatar: <img src="{{this.picture}}" alt=""> </li>
     </ul>
     <div class="profile-box-buttons-div">
       <button type="button" class="btn btn-success"><a href="/private/edit/{{this._id}}" class="edit-button">Edit profile</a></button>

@@ -112,8 +112,8 @@ button{
 
 /* profile page.................................................................. */
 .profile-background-div{
-  /* color: white; */
   height: 750px;
+  padding-top: 50px;
   display: flex;
   /* justify-content: center; */
   flex-direction: column;
@@ -123,6 +123,7 @@ button{
   background-position: center; 
   background-repeat: no-repeat; 
   background-size: cover; */
+  overflow: auto;
 }
 .nav{
   width: 100%;
@@ -131,6 +132,8 @@ button{
   display: flex;
   justify-content: space-around;
   align-items: center;
+  position: fixed;
+  overflow: auto;
 
 }
 .my-profile{
@@ -147,10 +150,14 @@ button{
   align-items: center;
   /* padding: auto 20px; */
   margin: 20px;
+  padding: 15px;
   width: 425px;
 }
 .profile-box ul{
-  align-self: flex-start;
+  /* align-self: flex-start; */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 .profile-box-buttons-div{
   margin: 20px auto;
