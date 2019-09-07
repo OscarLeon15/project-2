@@ -13,17 +13,17 @@
   <div class='my-profile'>
   {{#each profiles}}
     <div class="profile-box">
-      <a href="/teams/roster">
-        <h4>{{this.name}}</h4>
-      </a>
+      <a href="/teams/roster"><h4>{{this.name}}</h4></a>
     <ul>
       <li>Favorite team: {{this.favoriteTeam}}
-      <li>Avatar: {{this.picture}}</li>
+      <li>Avatar: <img src="{{this.picture}}" alt=""> </li>
     </ul>
-    <p><a href="/private/edit/{{this._id}}" class="edit-button">Edit profile</a></p>  
-    <form action="/private/delete/{{this._id}}" method="POST">
-    <button>Delete Profile</button>
-</form>
+    <div class="profile-box-buttons-div">
+      <button type="button" class="btn btn-success"><a href="/private/edit/{{this._id}}" class="edit-button">Edit profile</a></button>
+        <form action="/private/delete/{{this._id}}" method="POST">
+          <button>Delete Profile</button>
+        </form>
+    </div>
     </div>
   {{/each}}
   </div>

@@ -10,7 +10,12 @@ body {
 }
 a{
   /* color: #00B7FF;  */
+  color: black;
   text-decoration: none;
+}
+
+ul{
+  list-style-type: none;
 }
 h2{
   font-size: 25px;
@@ -129,8 +134,10 @@ button{
 
 }
 .my-profile{
-  background-color: lightgreen;
+  background-color: lightcyan;
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .profile-box{
   border: solid 2px black;
@@ -139,8 +146,21 @@ button{
   flex-direction: column;
   align-items: center;
   /* padding: auto 20px; */
-  margin: auto 20px;
-  width: 400px;
+  margin: 20px;
+  width: 425px;
+}
+.profile-box ul{
+  align-self: flex-start;
+}
+.profile-box-buttons-div{
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-evenly;
+  border-style: none;
+  border-radius: 12px;
+  width: 100%;
+
+
 }
 .private-bottom-links-div a{
   color: black;
