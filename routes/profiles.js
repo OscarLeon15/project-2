@@ -3,7 +3,7 @@ const router  = express.Router();
 const Profile = require('../models/Profile');
 
 /* GET create profile page */
-// TODO: add call to API load teams
+// TODO: add call to DB load teams
   router.get('/private/create-profile', (req, res, next) => {  
   
   // load username information from req.user to separate profiles created by each user
