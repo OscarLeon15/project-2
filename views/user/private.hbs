@@ -1,6 +1,11 @@
 <div class="nav">
-    <a href="/">Homepage</a>    
+  <div>
+    <a href="/private-page">Homepage</a>    
+  </div>
+  <div>
+    <a href="/private/create-profile">Create Profile</a> 
     <a href="/logout">Logout</a> 
+  </div>
 </div>
 <div>
   <div class="profile-background-div">
@@ -12,26 +17,35 @@
 {{#if profiles}}
   <div class='my-profile'>
   {{#each profiles}}
+  <div class="full-card">
+
     <div class="profile-box">
     <ul>
-      <li><img src="{{this.picture}}" alt="avatar picture"> </li>
+      <li><img src="{{this.picture}}" alt="avatar picture" class="avatar-picture"></li>
+      <li  class="card-name">
       <a href="/teams/roster"><h4>{{this.name}}</h4></a>
+      </li>
       <li>Favorite team: {{this.favoriteTeam}}
     </ul>
+    {{!-- <div class="profile-box-buttons-div">
+      <button class="bttn-sign-in"><a href="/private/edit/{{this._id}}" class="edit-button">Edit profile</a></button>
+        <form action="/private/delete/{{this._id}}" method="POST">
+          <button>Delete Profile</button>
+        </form>
+    </div> --}}
+    </div>
     <div class="profile-box-buttons-div">
-      <button type="button" class="btn btn-success"><a href="/private/edit/{{this._id}}" class="edit-button">Edit profile</a></button>
+      <button class="bttn-sign-in"><a href="/private/edit/{{this._id}}" class="edit-button">Edit profile</a></button>
         <form action="/private/delete/{{this._id}}" method="POST">
           <button>Delete Profile</button>
         </form>
     </div>
-    </div>
+  </div>
   {{/each}}
   </div>
 {{else}}
   <p>You don't have any profiles yet.</p>
 {{/if}}
-  <br><br>
-  <a href="/private/create-profile">Create Profile</a>
 {{/if}}
 
 

@@ -2,7 +2,7 @@
 <div class="sign-page">
 
   <div class="sign-div">
-      <h2>Log In</h2>
+      {{!-- <h2>Log In</h2> --}}
       <form action="/login" method="POST" class="sign-form">
         <div>
           <label for="username">Username:</label>
@@ -10,7 +10,7 @@
         </div>
         <div class="padding-15">
           <label for="password">Password:</label>
-          <input type="password" name="password" placeholder="password">
+          <input type="password" name="password" placeholder="********">
         </div>
         {{#if message}}
           <div class="error-message">{{ message }}</div>

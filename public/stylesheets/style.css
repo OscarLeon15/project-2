@@ -13,12 +13,15 @@ a{
   color: black;
   text-decoration: none;
 }
+a:hover{
+  text-decoration: none;
+}
 
 ul{
   list-style-type: none;
 }
 h2{
-  font-size: 25px;
+  font-size: 35px;
 }
 .padding-15{
   padding: 15px;
@@ -36,7 +39,8 @@ button{
   width: 200px;
   height: 40px;
   margin: 15px;
-  background-color: lightblue;
+  background-color: rebeccapurple;
+  color: white;
   border-radius: 12px;
   border-style: none;
 
@@ -56,12 +60,11 @@ button{
 }
 .bttn-sign-in{
   border-radius: 12px;
-  background-color: black;
+  background-color: rebeccapurple;
   color: white;
 }
 .button-container{
   display: flex;
-  flex-direction: column;
 }
 /* HOME page...................................................................... */
 #homepage-div{
@@ -78,6 +81,7 @@ button{
   background-size: cover;
 }
 .homepage-content-form{
+  padding-bottom: 230px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -90,13 +94,13 @@ button{
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url("../images/stripped-grass.jpg");
+  background-image: url("../images/homepage-soccer-grass1.jpg");
   background-position: center; 
   background-repeat: no-repeat; 
   background-size: cover;
 }
 .sign-div{
-  /* background-color: lightgrey; */
+  color: white;
   height: 750px;
   display: flex;
   justify-content: center;
@@ -115,35 +119,46 @@ button{
   height: 750px;
   padding-top: 50px;
   display: flex;
-  /* justify-content: center; */
   flex-direction: column;
   align-items: center;
-  background-color: lightgrey;
-  /* background-image: url("../images/profile-background1.jpg");
+  /* background-color: lightgrey; */
+  background-image: url("../images/stripped-grass.jpg");
   background-position: center; 
   background-repeat: no-repeat; 
-  background-size: cover; */
+  background-size: cover;
   overflow: auto;
 }
 .nav{
   width: 100%;
   padding: 15px 0px;
-  background-color: lightblue;
+  background-color: lightslategrey;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   position: fixed;
   overflow: auto;
-
+}
+.nav div{
+  margin: 0 20px;
 }
 .my-profile{
-  background-color: lightcyan;
+  /* background-color: lightcyan; */
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
+.full-card{
+  display: flex;
+  flex-direction: column;
+}
 .profile-box{
   border: solid 2px black;
+  border-radius: 12px;
+  background-image: url("../images//stadio-card.jpg");
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+  color: white;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -152,6 +167,10 @@ button{
   margin: 20px;
   padding: 15px;
   width: 425px;
+  height: 300px
+}
+.card-name a{
+  color: white;
 }
 .profile-box ul{
   /* align-self: flex-start; */
@@ -159,16 +178,19 @@ button{
   align-items: center;
   flex-direction: column;
 }
+.avatar-picture{
+  border-radius: 12px;
+  width: 300px;
+  height: 150px;
+}
 .profile-box-buttons-div{
-  margin: 20px auto;
   display: flex;
   justify-content: space-evenly;
+  align-self: flex-end;
   border-style: none;
   border-radius: 12px;
   width: 100%;
-
-
 }
-.private-bottom-links-div a{
-  color: black;
+.profile-box-buttons-div a:hover{
+  color: white;
 }
