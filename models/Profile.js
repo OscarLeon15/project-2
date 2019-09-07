@@ -4,6 +4,7 @@ const Schema = mongoose.Schema;
 const profileSchema = new Schema({
     username: String,
     name: String,
+    favoriteLeague: String,
     favoriteTeam: String,
     picture: { type: String, default: 'https://res.cloudinary.com/alejotsv/image/upload/v1567385712/no-avatar.png' }
 }, {

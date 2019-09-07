@@ -12,9 +12,9 @@ const Profile = require('../models/Profile');
 
 // POST request to add new profile
 router.post('/create-profile', (req, res, next) => {
-  const { username, name, favoriteTeam, picture} = req.body;  
+  const { username, name, favoriteLeague, favoriteTeam, picture} = req.body;  
 
-  const newProfile = new Profile({ username, name, favoriteTeam, picture});
+  const newProfile = new Profile({ username, name, favoriteLeague, favoriteTeam, picture});
   newProfile.save()
     .then((profile) => {
       res.redirect('/private-page')
@@ -41,9 +41,9 @@ router.get('/private/edit/:id', (req, res, next) => {
 
 // POST request to save updated profile
 router.post('/private/edit/:id', (req, res, next) => {
-  const { username, name, favoriteTeam, picture } = req.body;
+  const { username, name, favoriteLeague, favoriteTeam, picture } = req.body;
   const profileID = req.params.id;
-  Profile.update({ _id: profileID }, { $set: { username, name, favoriteTeam, picture }})
+  Profile.update({ _id: profileID }, { $set: { username, name, favoriteLeague, favoriteTeam, picture }})
     .then((profile) => {
       res.redirect('/private-page');
     })
