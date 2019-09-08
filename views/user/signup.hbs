@@ -1,10 +1,7 @@
 
 <div class="sign-page">
-
   <div class="sign-div">
-      <!-- views/auth/signup.hbs -->
       <h2>Only for soccer fans</h2>
-
       <form action="/signup" method="POST" id="form-container" class="sign-form">
         <div>
           <label for="username">Username</label>
@@ -20,12 +17,29 @@
         {{/if}}
         <div class="padding-15">
          <div >
-          <a href="/login"><button type="button" class="bttn-sign-up">Sign up</button></a>
+          <a href="/login"><button>Sign up</button></a>
         </div>
         </div>
-
       </form>
   </div>
-
-
 </div>
+
+
+{{!-- <h2>Signup</h2>
+
+<form action="/signup" method="POST" id="form-container">
+  <label for="username">Username</label>
+  <input id="username" type="text" name="username" placeholder="Are you Jon Snow?">
+  <br><br>
+  <label for="password">Password</label>
+  <input id="password" type="password" name="password" placeholder="Your password">
+
+  {{#if message}}
+    <div class="error-message">{{ message }}</div>
+  {{/if}}
+  <br><br>
+
+  <button>Create account</button>
+
+  
+</form> --}}
