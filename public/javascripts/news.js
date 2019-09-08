@@ -16,8 +16,10 @@ $(document).ready(function(){
       for (let i = 0; i < response.articles.length; i++){
 $('#blah').append(`<ul class='list-unstyled'><li class='media'><img src='${response.articles[i].urlToImage}' width='300' height='200' class='mr-3'><div class='media-body'><a href='${response.articles[i].url}' target='_blank'><h5 class='mt-0 mb-1'>${response.articles[i].title}</h5></a>${response.articles[i].content}</div></li></ul>`)
    
-        
       }
-    
-    })
+        })
+
+  
   })
+
+  
