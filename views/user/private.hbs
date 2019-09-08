@@ -1,6 +1,6 @@
 <div class="nav">
   <div>
-    <a href="/private-page">Homepage</a>    
+    <a href="/">Homepage</a>    
   </div>
   <div>
     <a href="/private/create-profile">Create Profile</a> 
@@ -10,7 +10,7 @@
 <div>
   <div class="profile-background-div">
 {{#if user}}
-  <h1>Hello, {{user.username}}!</h1>
+  <h1>Welcome {{user.username}}!</h1>
 
    
    <h3>Your profiles:</h3>
@@ -21,9 +21,9 @@
 
     <div class="profile-box">
       <ul>
-        <li><a href="/teams/roster"><img src="{{this.picture}}" alt="avatar picture" class="avatar-picture"></a></li>
+        <li><a href="/teams-roster"><img src="{{this.picture}}" alt="avatar picture" class="avatar-picture"></a></li>
         <li  class="card-name">
-        <a href="/teams/roster"><h4>{{this.name}}</h4></a>
+        <a href="/teams-roster"><h4>{{this.name}}</h4></a>
         </li>
         <li>Favorite team: {{this.favoriteTeam}}
       </ul>

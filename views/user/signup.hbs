@@ -3,7 +3,7 @@
 
   <div class="sign-div">
       <!-- views/auth/signup.hbs -->
-      <h2>Signup. Only for soccer fans</h2>
+      <h2>Only for soccer fans</h2>
 
       <form action="/signup" method="POST" id="form-container" class="sign-form">
         <div>
@@ -19,12 +19,11 @@
           <div class="error-message">{{ message }}</div>
         {{/if}}
         <div class="padding-15">
-          <button class="button-sign">Create account</button>
+         <div >
+          <a href="/login"><button type="button" class="bttn-sign-up">Sign up</button></a>
+        </div>
         </div>
 
-        {{!-- <p class="account-message">Do you already have an account?</p> --}}
-        <p>Do you already have an account?</p>
-          <a href="/login"><button class="button-sign">Login</button></a>
       </form>
   </div>
 

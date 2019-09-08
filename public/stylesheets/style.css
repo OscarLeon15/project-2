@@ -26,6 +26,13 @@ h2{
 .padding-15{
   padding: 15px;
 }
+th, div, p, h1{
+  color: white
+}
+h5{
+  color: black;
+}
+
 /*# sourceMappingURL=style.css.map */
 /* buttons........................................................................ */
 button{

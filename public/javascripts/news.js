@@ -3,8 +3,8 @@ $(document).ready(function(){
       method: "GET",
       type: "json",
       url: 'https://newsapi.org/v2/everything?' +
-      'from=2019-09-03&' +
-      'q=Madrid&' +
+      'from=2019-09-07&' +
+      'q=Real Madrid & soccer' + 
       'sources=bbc-sport,fox-sports, marca, mtv-news-uk, el-mundo, talksport, reuters, the-telegraph, associated-press, football-italia, lequipe, ansa, google-news, bleacher-report' +
       'language=en' +
       'category=sports' +

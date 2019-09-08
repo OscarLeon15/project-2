@@ -5,8 +5,7 @@ const Profile = require('../models/Profile');
 /* GET create profile page */
 // TODO: add call to DB load teams
   router.get('/private/create-profile', (req, res, next) => {  
-  
-  // load username information from req.user to separate profiles created by each user
+    // load username information from req.user to separate profiles created by each user
   res.render('user/create-profile', { username: req.user.username });
 });
 
