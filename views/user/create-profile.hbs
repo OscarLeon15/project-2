@@ -12,29 +12,31 @@
 
 <div class="profile-background-div">
 
-  <h1>Here you will create your profile</h1>
+  <div class="edit-create-profiles-div">
+    <h1>Here you will create your profile</h1>
 
-  <form action="/create-profile" method="post">
-  {{!-- Get username from req.user --}}
-    <input type="hidden" name="username" value="{{username}}">
+    <form action="/create-profile" method="post">
+    {{!-- Get username from req.user --}}
+      <input type="hidden" name="username" value="{{username}}">
 
-    <label for="">Name:</label>
-    <input type="text" name="name">
+      <label for="">Name:</label>
+      <input type="text" name="name">
 
-    <input type="hidden" name="favoriteLeague" value="{{chosenLeague}}">
+      <input type="hidden" name="favoriteLeague" value="{{chosenLeague}}">
 
-    <label for="">Pick your team:</label>
-      <select name="favoriteTeam">
-      <option hidden disabled selected value> -- Select Team -- </option>
-      {{#each team}}
-      <option value="{{this.name}}">{{this.name}}</option> 
-      {{/each}}   
-    </select>
+      <label for="">Pick your team:</label>
+        <select name="favoriteTeam">
+        <option hidden disabled selected value> -- Select Team -- </option>
+        {{#each team}}
+        <option value="{{this.name}}">{{this.name}}</option> 
+        {{/each}}   
+      </select>
 
-    <label for="">Avatar:</label>
-    <input type="text" name="picture">
+      <label for="">Avatar:</label>
+      <input type="text" name="picture">
 
-    <button type="submit">Create</button>
-  </form>
+      <button type="submit">Create</button>
+    </form>
+  </div>
 
 </div>
