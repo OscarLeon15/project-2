@@ -212,9 +212,7 @@ button{
   color: white;
 }
 
-
-/* ///test cards teams */
-
+/* ///test cards teams .............................................................*/
 #root {
   max-width: 1200px;
   margin: 0 auto;
@@ -241,3 +239,35 @@ button{
     flex: 1 1 calc(33% - 2rem);
   }
 }
+/* teams details ................................................................... */
+.section1{
+  background-color: lightgrey;
+  width: 100%;
+  /* height: 400px; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.avatar-side{
+  background-color: lightgreen;
+  height: 600px;
+}
+.middle-side{
+  background-color: lightblue;
+}
+.right-side{
+  background-color: pink;
+}
+.news-div{
+  display: flex;
+  width: 80%;
+}
+#blah{
+  background-color: #5e75e1;
+
+}
+/* news ul */
+.list-unstyled{
+  padding: 20px;
+}
+

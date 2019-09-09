@@ -1,26 +1,40 @@
-<h1>Here you will create your profile</h1>
 
-<form action="/create-profile" method="post">
-{{!-- Get username from req.user --}}
-  <input type="hidden" name="username" value="{{username}}">
+<div>
+  <div class="nav">
+  <div>
+    <a href="/private-page">Homepage</a>    
+  </div>
+  <div>
+    <a href="/private/create-profile">Create Profile</a> 
+    <a href="/logout" class="nav-a">Logout</a> 
+  </div>
+</div>
 
-  <label for="">Name:</label>
-  <input type="text" name="name">
+<div class="profile-background-div">
 
-  <input type="hidden" name="favoriteLeague" value="{{chosenLeague}}">
+  <h1>Here you will create your profile</h1>
 
-  <label for="">Pick your team:</label>
-    <select name="favoriteTeam">
-    <option hidden disabled selected value> -- Select Team -- </option>
-    {{#each team}}
-    <option value="{{this.name}}">{{this.name}}</option> 
-    {{/each}}   
-  </select>
+  <form action="/create-profile" method="post">
+  {{!-- Get username from req.user --}}
+    <input type="hidden" name="username" value="{{username}}">
 
-  <label for="">Avatar:</label>
-  <input type="text" name="picture">
+    <label for="">Name:</label>
+    <input type="text" name="name">
 
-  <button type="submit">Create</button>
-</form>
+    <input type="hidden" name="favoriteLeague" value="{{chosenLeague}}">
 
-<p>Back to <a href="/private-page">Homepage</a></p>
+    <label for="">Pick your team:</label>
+      <select name="favoriteTeam">
+      <option hidden disabled selected value> -- Select Team -- </option>
+      {{#each team}}
+      <option value="{{this.name}}">{{this.name}}</option> 
+      {{/each}}   
+    </select>
+
+    <label for="">Avatar:</label>
+    <input type="text" name="picture">
+
+    <button type="submit">Create</button>
+  </form>
+
+</div>

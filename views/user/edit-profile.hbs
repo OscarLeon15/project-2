@@ -1,26 +1,38 @@
-<h1>Edit your profile</h1>
 
-<form action="/private/edit/{{profile._id}}" method="post">
-{{!-- Get username from req.user --}}
-  <input type="hidden" name="username" value="{{username}}">
+<div>
+  <div class="nav">
+  <div>
+    <a href="/private-page">Homepage</a>    
+  </div>
+  <div>
+    <a href="/private/create-profile">Create Profile</a> 
+    <a href="/logout" class="nav-a">Logout</a> 
+  </div>
+</div>
 
-  <label for="">Name:</label>
-  <input type="text" name="name" value="{{profile.name}}">
+<div class="profile-background-div">
+  <h1>Edit your profile</h1>
 
-  <input type="hidden" name="favoriteLeague" value="{{profile.favoriteLeague}}">  
+  <form action="/private/edit/{{profile._id}}" method="post">
+  {{!-- Get username from req.user --}}
+    <input type="hidden" name="username" value="{{username}}">
 
-    <label for="">Pick your team:</label>
-    <select name="favoriteTeam">
-      <option selected value="{{profile.favoriteTeam}}">{{profile.favoriteTeam}}</option>
-      {{#each teams}}
-        <option value="{{this.name}}">{{this.name}}</option>
-      {{/each}}   
-    </select>
+    <label for="">Name:</label>
+    <input type="text" name="name" value="{{profile.name}}">
 
-  <label for="">Avatar:</label>
-  <input type="text" name="picture" value="{{profile.picture}}">
+    <input type="hidden" name="favoriteLeague" value="{{profile.favoriteLeague}}">  
 
-  <button type="submit">Update</button>
-</form>
+      <label for="">Pick your team:</label>
+      <select name="favoriteTeam">
+        <option selected value="{{profile.favoriteTeam}}">{{profile.favoriteTeam}}</option>
+        {{#each teams}}
+          <option value="{{this.name}}">{{this.name}}</option>
+        {{/each}}   
+      </select>
 
-<p>Back to <a href="/private-page">Homepage</a></p>
+    <label for="">Avatar:</label>
+    <input type="text" name="picture" value="{{profile.picture}}">
+
+    <button type="submit">Update</button>
+  </form>
+</div>
