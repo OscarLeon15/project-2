@@ -6,8 +6,7 @@ let chosenLeague = 'None';
 
 /* GET create profile page */
   router.get('/private/create-profile', (req, res, next) => {
-  // load username information from req.user to separate profiles created by each user
-  // res.render('user/create-profile', { username: req.user.username });
+  // load league pick page prior to profile creation page
   res.render('user/pick-league');
 });
 
@@ -19,8 +18,7 @@ let chosenLeague = 'None';
       })
       .catch((err) => {
         console.log(err);
-      })      
-    // res.render('user/create-profile', chosenLeague);
+      })    
   });
 
 // POST request to add new profile
