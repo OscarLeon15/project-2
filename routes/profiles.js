@@ -1,21 +1,36 @@
 const express = require('express');
 const router  = express.Router();
 const Profile = require('../models/Profile');
+const League = require('../models/League');
+let chosenLeague = 'None';
 
 /* GET create profile page */
-// TODO: add call to DB load teams
-  router.get('/private/create-profile', (req, res, next) => {  
-    // load username information from req.user to separate profiles created by each user
-  res.render('user/create-profile', { username: req.user.username });
+  router.get('/private/create-profile', (req, res, next) => {
+  // load username information from req.user to separate profiles created by each user
+  // res.render('user/create-profile', { username: req.user.username });
+  res.render('user/pick-league');
 });
+
+  router.get('/private/create-profile/:league', (req, res, next) => {
+    chosenLeague = req.params.league;
+    League.find({'area.name': chosenLeague}).
+      then((team) => {
+        res.render('user/create-profile', { team, chosenLeague, username: req.user.username });
+      })
+      .catch((err) => {
+        console.log(err);
+      })      
+    // res.render('user/create-profile', chosenLeague);
+  });
 
 // POST request to add new profile
 router.post('/create-profile', (req, res, next) => {
-  const { username, name, favoriteLeague, favoriteTeam, picture} = req.body;  
+  const { username, name, favoriteLeague, favoriteTeam, picture} = req.body; 
+
   const newProfile = new Profile({ username, name, favoriteLeague, favoriteTeam, picture});
   newProfile.save()
     .then((profile) => {
-        res.redirect('/private-page')
+      res.redirect('/private-page')
     })
     .catch((err) => {
       console.log(err);

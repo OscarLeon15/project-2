@@ -7,16 +7,16 @@
   <label for="">Name:</label>
   <input type="text" name="name">
 
-  <label for="">Pick your league:</label>
-  <select name="favoriteLeague">
-    <option hidden disabled selected value> -- Select League -- </option>
-    <option value="Spain">La Liga</option>
-    <option value="Italy">Calcio</option>
-    <option value="England">Premier League</option>
-  </select>
+  <input type="hidden" name="favoriteLeague" value="{{chosenLeague}}">
+
   
-  <label for="">Favorite team:</label>
-  <input type="text" name="favoriteTeam">
+  <label for="">Pick your team:</label>
+    <select name="favoriteTeam">
+    <option hidden disabled selected value> -- Select Team -- </option>
+    {{#each team}}
+    <option value="{{this.name}}">{{this.name}}</option> 
+    {{/each}}   
+  </select>
 
   <label for="">Avatar:</label>
   <input type="text" name="picture">
