@@ -18,7 +18,7 @@ let chosenLeague = 'None';
       })
       .catch((err) => {
         console.log(err);
-      })    
+      });
   });
 
 // POST request to add new profile
@@ -38,16 +38,22 @@ router.post('/create-profile', (req, res, next) => {
 // GET request to edit profile
 router.get('/private/edit/:id', (req, res, next) => {
   // extract profile ID to search database
-  const profileID = req.params.id;
+  const profileID = req.params.id;  
 
   // find profile object using ID
   Profile.findOne({ _id: profileID })
-    .then((profile) => {      
-      res.render("user/edit-profile", { profile, username: req.user.username });
+    .then((profile) => {
+        League.find({'area.name': profile.favoriteLeague}).
+        then((teams) => {
+          res.render("user/edit-profile", { teams, profile, username: req.user.username });
+        })
+        .catch((err) => {
+          console.log(err);
+        });      
     })
     .catch((err) => {
       console.log(err);
-    })  
+    });
 });
 
 // POST request to save updated profile
