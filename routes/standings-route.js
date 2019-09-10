@@ -3,8 +3,10 @@ const router  = express.Router();
 
 
 
-router.get('/standingsLaLiga', (req, res, next) => {
-    res.render('static-views/standingsLiga');
+router.get('/standings/:league', (req, res, next) => {
+  const leagueName = req.params.league;
+  console.log(leagueName);
+    res.render('static-views/standings', { name });
 });
 
 
