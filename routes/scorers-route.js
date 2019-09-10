@@ -14,12 +14,4 @@ router.get('/scorersPremier', (req, res, next) => {
   res.render('static-views/scorersPremier');
 });
 
-
-// testing the news api
-router.get('/teams-roster', (req, res, next) => {
-    res.render('static-views/news');
-})
-
-
-
 module.exports = router;

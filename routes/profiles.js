@@ -81,4 +81,23 @@ router.post('/private/delete/:id', (req, res, next) => {
     });  
 });
 
+// GET route to display full Profile
+router.get('/profile/:id', (req, res, next) => {
+  const profileID = req.params.id;
+    // find profile object using ID
+    Profile.findOne({ _id: profileID })
+    .then((profile) => {
+      League.find({'name': profile.favoriteTeam}).
+        then((team) => {
+          res.render("static-views/full-profile", { team, profile });
+        })
+        .catch((err) => {
+          console.log(err);
+        });      
+    })
+    .catch((err) => {
+      console.log(err);
+    });  
+});
+
 module.exports = router;

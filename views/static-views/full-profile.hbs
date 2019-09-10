@@ -16,38 +16,33 @@
     {{!-- left side avatar --}}
     <div class="avatar-side">
       <div class="avatar-photo">
-        <img src="../images//stadio-card.jpg" alt="avatar picture" class="avatar-picture-details">
+        <img src="{{profile.picture}}" alt="avatar picture" class="avatar-picture-details">
       </div>
       <div>
-        name
+        {{profile.name}}
       </div>
       <div>
-        liga name
+        {{profile.favoriteLeague}}
       </div>
  
     </div>
     {{!-- middle side --}}
     <div class="middle-side">
       <div class="selected-team-card">
-        <div class="selected-team"> <img src="../images/stadio-card.jpg" alt="" class="selected-team-logo"></div>
+        <div class="selected-team"> <img src="{{team.[0].crestUrl}}" alt="{{profile.name}} logo" class="selected-team-logo"></div>
         <div class="selected-team-info">
-          <h4>the team name</h4>
-          <button>team details</button>
+          <h3>{{profile.favoriteTeam}}</h3>
+          <h6>Venue: {{team.[0].venue}}</h6>
+          <h6>Foundation year: {{team.[0].founded}}</h6>  
+          <h6>website: <a target='_blank' href='{{team.[0].website}}'>{{team.[0].website}}</a></h6>
         </div>
       </div>
     </div>
     {{!-- right side --}}
     <div class="right-side">
-      <h2>check out the liga tables:</h2>
-      <h3>scorer:</h3>
-      <div><a href="/scorersLaLiga">scorersLaLiga</a></div>
-      <div><a href="/scorersSerieA">scorersSerieA</a></div>
-      <div><a href="/scorersPremier">scorersPremier</a></div>
-      <h3>standings:</h3>
-      <div><a href="/standingsLaLiga">standingsLaLiga</a></div>
-      <div><a href="/standingsSerieA">standingsSerieA</a></div>
-      <div><a href="/standingsPremier">standingsPremier</a></div>
-
+          
+      <div><a target='_blank' href="/standings/{{profile.favoriteLeague}}">League standings in {{profile.favoriteLeague}}</a></div>
+      <div><a target='_blank' href="/scorers/{{profile.favoriteLeague}}">Top scorers in {{profile.favoriteLeague}}</a></div>
     </div>
   </div>
 
