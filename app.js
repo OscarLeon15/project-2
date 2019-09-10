@@ -16,6 +16,8 @@ const User = require('./models/User');
 const Profile = require('./models/Profile');
 
 mongoose
+
+//  .connect(process.env.MONGODB_URI, {useMongoClients: true})
  .connect('mongodb://localhost/project-2', {useNewUrlParser: true})
  .then(x => {
    console.log(`Connected to Mongo! Database name:  ${x.connections[0].name}`)
