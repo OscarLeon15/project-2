@@ -19,11 +19,12 @@
         <img src="{{profile.picture}}" alt="avatar picture" class="avatar-picture-details">
       </div>
       <div>
-        {{profile.name}}
+        <p>{{profile.name}}</p>
       </div>
       <div>
-        {{profile.favoriteLeague}}
+        <p>League: {{profile.favoriteLeague}}</p>    
       </div>
+      <button class="bttn-sign-in"><a href="/private/edit/{{this._id}}" class="edit-button">Edit profile</a></button>
  
     </div>
     {{!-- middle side --}}
