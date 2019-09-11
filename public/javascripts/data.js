@@ -900,4 +900,6 @@ const teams = [{
   "__v" : 0
 }];
 
+console.log(teams[0]['name'])
+
 module.exports = teams;

@@ -3,6 +3,8 @@ const router  = express.Router();
 const Profile = require('../models/Profile');
 const League = require('../models/League');
 const upload = require('../config/cloudinaryConfig');
+// const news = require('../public/javascripts/news');
+
 
 let chosenLeague = 'None';
 
@@ -42,7 +44,6 @@ router.post('/create-profile', upload.single('picture'), (req, res, next) => {
 router.get('/private/edit/:id', (req, res, next) => {
   // extract profile ID to search database
   const profileID = req.params.id;  
-
   // find profile object using ID
   Profile.findOne({ _id: profileID })
     .then((profile) => {
@@ -84,15 +85,16 @@ router.post('/private/delete/:id', (req, res, next) => {
     });  
 });
 
+
 // GET route to display full Profile
 router.get('/profile/:id', (req, res, next) => {
-  const profileID = req.params.id;
+   const profileID = req.params.id;
     // find profile object using ID
     Profile.findOne({ _id: profileID })
     .then((profile) => {
       League.find({'name': profile.favoriteTeam}).
         then((team) => {
-          res.render("static-views/full-profile", { team, profile });
+            res.render("static-views/full-profile", { team, profile });
         })
         .catch((err) => {
           console.log(err);
@@ -103,4 +105,6 @@ router.get('/profile/:id', (req, res, next) => {
     });  
 });
 
+
 module.exports = router;
+
