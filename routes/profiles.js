@@ -2,6 +2,8 @@ const express = require('express');
 const router  = express.Router();
 const Profile = require('../models/Profile');
 const League = require('../models/League');
+const upload = require('../config/cloudinaryConfig');
+
 let chosenLeague = 'None';
 
 /* GET create profile page */
@@ -22,8 +24,9 @@ let chosenLeague = 'None';
   });
 
 // POST request to add new profile
-router.post('/create-profile', (req, res, next) => {
-  const { username, name, favoriteLeague, favoriteTeam, picture} = req.body; 
+router.post('/create-profile', upload.single('picture'), (req, res, next) => {
+  const { username, name, favoriteLeague, favoriteTeam } = req.body;
+  let picture = req.file.url;
 
   const newProfile = new Profile({ username, name, favoriteLeague, favoriteTeam, picture});
   newProfile.save()

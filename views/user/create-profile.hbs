@@ -15,7 +15,7 @@
   <div class="edit-create-profiles-div">
     <h1>Here you will create your profile</h1>
 
-    <form action="/create-profile" method="post">
+    <form action="/create-profile" method="post" enctype="multipart/form-data">
     {{!-- Get username from req.user --}}
       <input type="hidden" name="username" value="{{username}}">
 
@@ -33,7 +33,7 @@
       </select>
 
       <label for="">Avatar:</label>
-      <input type="text" name="picture">
+      <input type="file" name="picture">
 
       <button type="submit">Create</button>
     </form>
