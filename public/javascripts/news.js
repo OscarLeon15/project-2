@@ -1,4 +1,6 @@
+// const test = require('../../routes/profiles');
 
+// console.log(test);
 
 $(document).ready(function(){
   $.ajax({
@@ -6,7 +8,7 @@ $(document).ready(function(){
           type: "json",
           url: 'https://newsapi.org/v2/everything?' +
           'from=2019-09-10&' +
-          'q=FC Barcelona & soccer' + 
+          'q=Real Madrid & soccer' + 
           'sources=bbc-sport,fox-sports, marca, mtv-news-uk, el-mundo, talksport, reuters, the-telegraph, associated-press, football-italia, lequipe, ansa, google-news, bleacher-report' +
           'language=en' +
           'category=sports' +
@@ -14,7 +16,7 @@ $(document).ready(function(){
           'apiKey=308d8f4e99ae4cf8b0fa8709b91948c4'
                     
         }).done(function(response) {  
-          console.log(response.articles);
+         
           for (let i = 0; i < response.articles.length; i++){
     $('#div1').append(`<ul class='list-unstyled'><li class='media'><img src='${response.articles[i].urlToImage}'
      width='300' height='200' class='mr-3'><div class='media-body'><a href='${response.articles[i].url}' target='_blank'>
@@ -22,6 +24,4 @@ $(document).ready(function(){
              }
             })
 });
-
-
 

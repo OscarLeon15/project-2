@@ -900,6 +900,8 @@ const teams = [{
   "__v" : 0
 }];
 
-console.log(teams[0]['name'])
+
+// $('#div1').html("Hello <b>world</b>!");
+// console.log(teams[0]['name'])
 
 module.exports = teams;

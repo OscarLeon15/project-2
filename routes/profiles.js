@@ -6,6 +6,7 @@ const upload = require('../config/cloudinaryConfig');
 // const news = require('../public/javascripts/news');
 
 
+
 let chosenLeague = 'None';
 
 /* GET create profile page */
@@ -106,6 +107,6 @@ router.get('/profile/:id', (req, res, next) => {
 });
 
 
-
 module.exports = router;
+
 
