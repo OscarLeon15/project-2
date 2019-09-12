@@ -3,12 +3,13 @@
 // console.log(test);
 
 $(document).ready(function(){
+  let team = $('#news-team').html();  
   $.ajax({
           method: "GET",
           type: "json",
           url: 'https://newsapi.org/v2/everything?' +
           'from=2019-09-10&' +
-          'q=Real Madrid & soccer' + 
+          'q=' + team + '& soccer' + 
           'sources=bbc-sport,fox-sports, marca, mtv-news-uk, el-mundo, talksport, reuters, the-telegraph, associated-press, football-italia, lequipe, ansa, google-news, bleacher-report' +
           'language=en' +
           'category=sports' +
