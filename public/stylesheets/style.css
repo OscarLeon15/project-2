@@ -95,7 +95,31 @@ button{
   justify-content: center;
   align-items: center;
 }
+.app-explination{
+  width: 40%;
+  height: 50px;
+    overflow: hidden;
+    -moz-transition: height 1s ease;
+    -webkit-transition: height 1s ease;
+    -o-transition: height 1s ease;
+    transition: height 1s ease;
+  /* background-color: rebeccapurple; */
+  background-color: #5e75e1;
+  text-align: center;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+}
 
+.app-explination:hover{
+  height: 300px;
+  /* background-color: #5e75e1; */
+}
+.app-explination li{
+  border: #5e75e1 solid 2px;
+  margin-bottom: 5px;
+  border-radius: 12px;
+}
 /* sign in/up page ..................................................... */
 .sign-page{
   height: 750px;
@@ -224,7 +248,7 @@ button{
 }
 .avatar-picture{
   border-radius: 12px;
-  width: 300px;
+  width: 250px;
   height: 150px;
 }
 .profile-box-buttons-div{
