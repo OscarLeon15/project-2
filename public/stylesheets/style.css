@@ -26,9 +26,9 @@ h2{
 .padding-15{
   padding: 15px;
 }
-th, div, p, h1{
+/* th, div, p, h1{
   color: white
-}
+} */
 h5{
   color: black;
 }
@@ -46,7 +46,8 @@ button{
   width: 200px;
   height: 40px;
   margin: 15px;
-  background-color: rebeccapurple;
+  background-color: #5e75e1;
+  /* background-color: rebeccapurple; */
   color: white;
   border-radius: 12px;
   border-style: none;
@@ -68,7 +69,7 @@ button{
 /* button color */
 .bttn-sign-in{
   border-radius: 12px;
-  background-color: rebeccapurple;
+  background-color: #5e75e1;
   color: white;
 }
 .button-container{
@@ -190,7 +191,8 @@ button{
 .nav{
   width: 100%;
   height: 50px;
-  background-color: darkgreen;
+  background-color: #5e75e1;
+  /* background-color: darkgreen; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -299,13 +301,26 @@ button{
   }
 }
 /* teams details ................................................................... */
+.full-profile-div{
+  height: 750px;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background-color: lightgrey; */
+}
 .section1{
   /* background-color: lightgrey; */
   width: 100%;
   margin-bottom: 50px;
   display: flex;
   justify-content: space-between;
+  background-image: url("../images/stripped-grass.jpg");
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
 }
+
 
 /* ................left side */
 .avatar-side{
@@ -323,7 +338,7 @@ button{
 }
 .avatar-picture-details{
   width: 275px;
-  height: 300px;
+  height: 250px;
   border-radius: 12px;
 }
 /* ................middle */
@@ -337,7 +352,8 @@ button{
 .selected-team-card{
   width: 80%;
   padding: 10px;
-  background-color: rebeccapurple;
+  background-color: #5e75e1;
+  /* background-color: rebeccapurple; */
   border-radius: 12px;
   display: flex;
   justify-content: space-evenly;
@@ -375,6 +391,8 @@ button{
 .news-div{
   display: flex;
   width: 80%;
+  background-color: lightgrey;
+  border-radius: 12px;
 }
 #blah{
   background-color: #5e75e1;
@@ -384,6 +402,7 @@ button{
 .list-unstyled{
   padding: 20px;
 }
+
 
 /* liga tables ................................................. */
 .liga-logo-table{
