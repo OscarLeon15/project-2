@@ -183,8 +183,8 @@ button{
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* background-color: lightgrey; */
-  background-image: url("../images/stripped-grass.jpg");
+  background-color: lightgrey;
+  /* background-image: url("../images/stripped-grass.jpg"); */
   background-position: center; 
   background-repeat: no-repeat; 
   background-size: cover;

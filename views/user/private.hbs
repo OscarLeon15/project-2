@@ -10,11 +10,11 @@
 <div>
   <div class="profile-background-div">
 {{#if user}}
-  <h1>Welcome {{user.username}}!</h1>
-
+  <h1>Welcome {{user.username}}!</h1>   
    
-   <h3>Your profiles:</h3>
 {{#if profiles}}
+<p>Click on any of your profiles below and check out the latest news, league standings, and more related to your favorite team.
+<h3>Your profiles:</h3>
   <div class='my-profile'>
   {{#each profiles}}
   <div class="full-card">
@@ -39,7 +39,11 @@
   {{/each}}
   </div>
 {{else}}
-  <p>You don't have any profiles yet.</p>
+  <p>Thanks for joining the Live Football Updates family! We've noticed you haven't created any profiles yet. To start enjoying this app, the first step is to <a href='/private/create-profile'>Create a profile</a>, selecting your favorite team from La Liga, the Serie A, or the Premier League.</p>
+  <p>Once your profile is created, click on it and check out the latest news, league standings, and more related to your favorite team.
+  <form action="/private/create-profile">
+    <input type="submit" value="Create profile" />
+  </form>
 {{/if}}
 {{/if}}
 
