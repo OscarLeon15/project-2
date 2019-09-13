@@ -1,17 +1,18 @@
 const express = require('express');
 const router  = express.Router();
 
-
-router.get('/scorersLaLiga', (req, res, next) => {
+router.get('/scorers/:league', (req, res, next) => {
+  const leagueName = req.params.league;
+  if (leagueName === 'Spain'){
     res.render('static-views/scorersLiga');
-})
-
-router.get('/scorersSerieA', (req, res, next) => {
-  res.render('static-views/scorersSerie');
+  } else if (leagueName === 'Italy'){
+    res.render('static-views/scorersSerie');
+  } else if (leagueName === 'England'){
+    res.render('static-views/scorersPremier');
+  }
+    
 });
 
-router.get('/scorersPremier', (req, res, next) => {
-  res.render('static-views/scorersPremier');
-});
+
 
 module.exports = router;
