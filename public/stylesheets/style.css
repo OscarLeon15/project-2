@@ -55,6 +55,7 @@ button{
 }
 .login-home-div{
   padding-top: 15px;
+  padding-bottom: 15px;
 }
 .button-sign{
   background-color: lightslategrey;
@@ -72,32 +73,39 @@ button{
   background-color: #5e75e1;
   color: white;
 }
-.button-container{
+/* .button-container{
   display: flex;
-}
+} */
 /* HOME page...................................................................... */
 #homepage-div{
   color: white;
   height: 750px;
   padding: 50px;
+  text-align: center;
   display: flex;
   justify-content: flex-start;
-  /* flex-direction: column;
-  align-items: center; */
+  flex-direction: column;
+  /* align-items: center; */
   background-image: url("../images/homepage-soccer-grass1.jpg");
   background-position: center; 
   background-repeat: no-repeat; 
   background-size: cover;
 }
+#homepage-div h1{
+  width: 45%;
+}
 .homepage-content-form{
-  padding-bottom: 230px;
+  /* padding-bottom: 230px; */
+  background-color: lightgrey;
+  border-radius: 12px;
+  width: 45%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
 }
 .app-explination{
-  width: 40%;
+  /* width: 40%; */
   height: 50px;
     overflow: hidden;
     -moz-transition: height 1s ease;
