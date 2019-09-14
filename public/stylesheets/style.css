@@ -53,10 +53,10 @@ button{
   border-style: none;
 
 }
-.login-home-div{
+/* .login-home-div{
   padding-top: 15px;
   padding-bottom: 15px;
-}
+} */
 .button-sign{
   background-color: lightslategrey;
   border-radius: 12px;
@@ -73,9 +73,9 @@ button{
   background-color: #5e75e1;
   color: white;
 }
-/* .button-container{
+.button-container{
   display: flex;
-} */
+}
 /* HOME page...................................................................... */
 #homepage-div{
   color: white;
@@ -100,9 +100,10 @@ button{
   color: black;
   border-radius: 12px;
   width: 45%;
+  height: 500px;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
+  justify-content: center;
   align-items: center;
 }
 .app-explination{
@@ -120,7 +121,10 @@ button{
   display: flex;
   flex-direction: column;
 }
-
+.sign-text{
+  width: 450px;
+  padding-bottom: 100px;
+}
 .app-explination:hover{
   height: 300px;
   /* background-color: #5e75e1; */
@@ -354,6 +358,7 @@ button{
 }
 .avatar-side p{
   font-size: 40px;
+  color: white;
 }
 .avatar-picture-details{
   width: 275px;
