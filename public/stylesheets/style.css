@@ -64,7 +64,7 @@ button{
 }
 .bttn-sign-up{
   border-radius: 12px;
-  background-color: white;
+  background-color: lightgrey;
   color: black;
 }
 /* button color */
@@ -96,7 +96,8 @@ button{
 }
 .homepage-content-form{
   /* padding-bottom: 230px; */
-  background-color: lightgrey;
+  background-color: white;
+  color: black;
   border-radius: 12px;
   width: 45%;
   display: flex;
@@ -150,6 +151,9 @@ button{
 }
 .sign-form{
   padding: 20px;
+  background-color: white;
+  color: black;
+  border-radius: 12px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -184,14 +188,14 @@ button{
   background-repeat: no-repeat; 
   background-size: cover; */
 }
-/* profile page.................................................................. */
+/* profile netflix page.................................................................. */
 .profile-background-div{
   height: 750px;
   padding-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: lightgrey;
+  /* background-color: lightgrey; */
   /* background-image: url("../images/stripped-grass.jpg"); */
   background-position: center; 
   background-repeat: no-repeat; 
@@ -310,7 +314,7 @@ button{
     flex: 1 1 calc(33% - 2rem);
   }
 }
-/* teams details ................................................................... */
+/* full profile ................................................................... */
 .full-profile-div{
   height: 750px;
   padding-top: 50px;
@@ -330,7 +334,12 @@ button{
   background-repeat: no-repeat; 
   background-size: cover;
 }
-
+.white-link a{
+  color: white;
+}
+.white-link a:hover{
+  color: darkgreen;
+}
 
 /* ................left side */
 .avatar-side{
@@ -393,6 +402,7 @@ button{
   /* background-color: pink; */
   width: 20%;
   text-align: center;
+  padding-right: 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -408,11 +418,18 @@ button{
   background-color: #5e75e1;
   margin-bottom: 50px;
 }
+.white-bubble{
+  background-color: #5e75e1;
+  padding: 10px;
+  border-radius: 12px;
+}
 /* news ul */
 .list-unstyled{
   padding: 20px;
 }
-
+.media-body h5{
+  font-weight: bold;
+}
 
 /* liga tables ................................................. */
 .liga-logo-table{
